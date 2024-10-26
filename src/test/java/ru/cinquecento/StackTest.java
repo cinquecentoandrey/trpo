@@ -1,5 +1,6 @@
 package ru.cinquecento;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Slf4j
 public class StackTest {
 
     private Stack stack;
@@ -23,11 +25,13 @@ public class StackTest {
 
     @Test
     void testIsEmptyOnNewStack() {
+        log.info("Running testIsEmptyOnNewStack()");
         assertTrue(stack.isEmpty(), "New stack should be empty");
     }
 
     @Test
     void testPush() {
+        log.info("Running testPush()");
         stack.push(10);
         assertFalse(stack.isEmpty(), "Stack should not be empty after push");
         assertEquals(10, stack.getTop().getData(), "Top element should be 10");
@@ -38,6 +42,7 @@ public class StackTest {
 
     @Test
     void testPop() {
+        log.info("Running testPop()");
         stack.push(10);
         stack.push(20);
         stack.pop();
@@ -50,6 +55,7 @@ public class StackTest {
 
     @Test
     void testSearchByValue() {
+        log.info("Running testSearchByValue()");
         stack.push(10);
         stack.push(20);
         stack.push(30);
@@ -63,6 +69,7 @@ public class StackTest {
 
     @Test
     void testSearchByIndex() {
+        log.info("Running testSearchByIndex()");
         stack.push(10);
         stack.push(20);
         stack.push(30);
@@ -76,6 +83,7 @@ public class StackTest {
 
     @Test
     void testDestroyStack() {
+        log.info("Running testDestroyStack()");
         stack.push(10);
         stack.push(20);
         stack.destroyStack();
@@ -86,6 +94,7 @@ public class StackTest {
 
     @Test
     void testTraverseStack() {
+        log.info("Running testTraverseStack()");
         stack.push(10);
         stack.push(20);
         stack.push(30);

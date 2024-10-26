@@ -17,6 +17,7 @@
     <mvn.pir.version>3.4.5</mvn.pir.version>
     <mvn.surefire.version>3.5.1</mvn.surefire.version>
     <jmh.version>1.37</jmh.version>
+    <slf4j.version>2.0.16</slf4j.version>
   </properties>
 
   <dependencies>
@@ -48,6 +49,17 @@
       <groupId>com.github.spotbugs</groupId>
       <artifactId>spotbugs</artifactId>
       <version>4.8.6</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.16</version>
+      <scope>${slf4j.version}</scope>
     </dependency>
   </dependencies>
 
